@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
-    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
     color: white;
     /* background-color: black; */
     background-color: #191919;
@@ -20,9 +28,15 @@ html{
     background-position: center;
 }
 nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 45px;
     padding-left: 8%;
     padding-right: 8%;
@@ -46,10 +60,14 @@ nav ul li a{
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
 }
 nav ul li a:hover{
     color: #f9004d;
+    -webkit-transition: #f9004d;
+    -o-transition: #f9004d;
     transition: #f9004d;
     cursor: pointer;
 }
@@ -62,16 +80,24 @@ nav ul li a:hover{
     font-weight: bold;
     padding: 10px 25px;
     border-radius: 30px;
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    -o-transition: transform .4s;
     transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s;
 }
 .btn:hover{
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
 }
 .content{
     position: absolute;
     top: 50%;
     left: 8%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 h1{
     margin: 20px 0px 20px;
@@ -107,7 +133,8 @@ h4{
     padding: 10px 30px;
     border-radius: 30px;
     background-color:#f9004d;
-    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858;
+    -webkit-box-shadow: 0px 0px 5px #000, 0px 0px 15px #858;
+            box-shadow: 0px 0px 5px #000, 0px 0px 15px #858;
     top: 6px;
     right: 6px;
 }
@@ -122,6 +149,8 @@ h4{
     height: auto;
     width: 450px;
     border-radius: 50%;
+    -webkit-transition: all ease 1s;
+    -o-transition: all ease 1s;
     transition: all ease 1s; /* for image hover effect in about section */
 }
 .about img:hover{
@@ -131,6 +160,8 @@ h4{
     #about img{
         height: 200px;
         width: 200px;
+        -webkit-transition: smooth;
+        -o-transition: smooth;
         transition: smooth;
     }
 }
@@ -143,9 +174,14 @@ h4{
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .about-text h2{
     font-size: 75px;
@@ -166,6 +202,8 @@ h4{
     margin-bottom: 45px;
 }
 .submit{
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 .submit:hover{
@@ -181,6 +219,8 @@ button{
     font-weight: bold;
     padding: 13px 30px;
     border-radius: 30px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
     transition: .4s;
 }
 button:hover{
@@ -228,17 +268,24 @@ button:hover{
 	background-color: #d03645;
 	top: calc(125% - 1px);
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
     color: white;
 }
 .container .row{
     width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-top: 70px;
 }
 .row .col{
-    flex-basis: 46%;
+    -ms-flex-preferred-size: 46%;
+        flex-basis: 46%;
 }
 .row .sub-title h2{
     position: relative;
@@ -296,7 +343,13 @@ button:hover{
 	background-color: #d03645;
 	border-radius: 15px;
 	top: -1px;
-	animation: animate 4.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+	-webkit-animation: animate 4.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+	        animation: animate 4.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+@-webkit-keyframes animate{
+	100%{
+		width: 100%;
+	}
 }
 @keyframes animate{
 	100%{
@@ -311,7 +364,9 @@ button:hover{
 	border-radius: 50%;
 	top: 50%;
 	left: 100%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	background-color: #d03645;
 }
 /* applying media qur* to auto adjust skill section along with user display */
@@ -322,7 +377,10 @@ button:hover{
 }
 @media(max-width: 568px){
 	.container .row{
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	.container .main-title h1{
 		font-size: 36px;
@@ -342,8 +400,12 @@ button:hover{
     padding: 100px 0px;
 }
 .portfolio-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 20px;
 }
 
@@ -379,7 +441,9 @@ button:hover{
     margin-bottom: 5px;
 }
 #contact p{
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 /* ******** Copyright ******* */
 #copyright{
