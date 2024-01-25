@@ -7,8 +7,13 @@
     /* background-color: black; */
     background-color: #191919;
 }
+/* html scroll-behavior smooth is use to make page animation smooth when scroll */
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 0.05rem;
+}
 .hero{
-    background-color: #191919;
+    /* background-color: #191919; */
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -62,8 +67,6 @@ nav ul li a:hover{
 .btn:hover{
     transform: scale(0.9);
 }
-
-
 .content{
     position: absolute;
     top: 50%;
@@ -110,10 +113,10 @@ h4{
 }
 /* ********  About Section ********/
 .about{
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 100px 0px;
-    background-color: #191919;
+    /* background-color: #191919; */
 }
 .about img{
     height: auto;
@@ -124,6 +127,14 @@ h4{
 .about img:hover{
     scale: 1.1; /* for image hover effect in about section */
 }
+@media(min-width: 0px) and (max-width: 500px) {
+    #about img{
+        height: 200px;
+        width: 200px;
+        transition: smooth;
+    }
+}
+
 .about-text{
     width: 550px;
 }
@@ -337,7 +348,7 @@ button:hover{
 }
 
 .project-box {
-    background-color: #191919;
+    /* background-color: #191919; */
     padding: 20px;
     border-radius: 10px;
     width: 30%;
@@ -354,7 +365,7 @@ button:hover{
 
 .project-description {
     font-size: 16px;
-    color: #666;
+    color: #8d6060;
     margin-top: 10px;
 
 }
